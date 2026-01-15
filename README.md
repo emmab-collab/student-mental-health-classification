@@ -1,5 +1,10 @@
 # Student Mental Health - Depression Prediction
 
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)
+![pandas](https://img.shields.io/badge/pandas-2.0+-green.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 Projet de Machine Learning pour prédire la dépression chez les étudiants et professionnels à partir de données cliniques et socio-professionnelles.
 
 ## Objectif
