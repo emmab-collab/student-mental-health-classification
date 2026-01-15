@@ -86,3 +86,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Notebooks originaux (non versionnés)
+EDA_Student_Mental_Health(1).ipynb
+pre-processing-mental-health.ipynb

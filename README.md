@@ -8,27 +8,28 @@ Prédire si une personne est en dépression (variable binaire) avec les métriqu
 - **F1 Score** ≥ 0.5
 - **Recall** ≥ 0.7 (priorité : ne pas manquer de cas positifs)
 
-### Résultats obtenus
-- **F1 Score : 0.86**
-- **Recall : 0.94**
+### Résultats obtenus (threshold = -0.01)
+- **F1 Score : 0.87**
+- **Recall : 0.87**
 
 ## Structure du projet
 
 ```
 STUDENT MENTAL HEALTH/
 ├── data/
-│   ├── train.csv          # Données d'entraînement
-│   ├── test.csv           # Données de test
-│   └── submission.csv     # Prédictions pour Kaggle
+│   ├── train.csv              # Données d'entraînement
+│   ├── test.csv               # Données de test
+│   └── submission.csv         # Prédictions pour Kaggle
 ├── notebooks/
-│   └── main_pipeline.ipynb    # Notebook principal
+│   ├── main_pipeline.ipynb    # Pipeline de modélisation
+│   └── eda_pipeline.ipynb     # Analyse exploratoire
 ├── src/
 │   ├── __init__.py
+│   ├── config.py          # Configuration et constantes
+│   ├── eda.py             # Fonctions d'analyse exploratoire
 │   ├── preprocessing.py   # Encodage et imputation
 │   ├── modeling.py        # Modèles ML
 │   └── evaluation.py      # Métriques et courbes
-├── EDA_Student_Mental_Health(1).ipynb  # Analyse exploratoire
-├── pre-processing-mental-health.ipynb  # Notebook original
 ├── requirements.txt
 └── README.md
 ```
@@ -90,6 +91,7 @@ for name, model in models.items():
 - `algorithm` : SAMME.R
 - `learning_rate` : 1.0
 - `n_estimators` : 100
+- `threshold` : -0.01 (seuil de décision optimisé via courbe Precision-Recall)
 
 ## Insights EDA
 
